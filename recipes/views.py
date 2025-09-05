@@ -3,10 +3,10 @@ from django.http import HttpResponse
 
 
 # Create your views here.
-# HTTP REQUEST
 def home(request):
-    return HttpResponse("Home")
-    # return HTTP Response
+    return render(request, "recipes/home.html", context={
+        'name': 'makoto',
+    })
 
 
 def about(request):
@@ -15,4 +15,3 @@ def about(request):
 
 def contact(request):
     return HttpResponse("Contact")
-  
